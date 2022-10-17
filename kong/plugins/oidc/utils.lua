@@ -45,6 +45,7 @@ function M.get_redirect_uri(ngx)
 end
 
 function M.get_options(config, ngx)
+  ngx.log(ngx.DEBUG, "CLIENT_ID " .. config.client_id)
   return {
     client_id = config.client_id,
     client_secret = config.client_secret,
